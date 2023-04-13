@@ -1,9 +1,12 @@
-<div class="container d-flex my-3">
-  <div class="col-md-3" >
-    <%= render 'users/info', user: current_user %>
-    <%= render 'post', book: @book %>
-  </div>
-  <div class="col-md-8 offset-md-1">
-    <%= render 'index', book: @books %>
+<div class="container my-3">
+  <%= render 'layouts/error', obj: @book %>
+  <div class="row d-flex">
+    <div class="col-md-3" >
+      <%= render 'users/info', user: current_user %>
+      <%= render 'post', book: @book %>
+    </div>
+    <div class="col-md-8 offset-md-1">
+      <%= render 'index', book: @books %>
+    </div>
   </div>
 </div>
